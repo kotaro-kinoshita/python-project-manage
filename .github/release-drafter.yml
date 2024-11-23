@@ -2,19 +2,13 @@
   name-template: "v$RESOLVED_VERSION"
   tag-template: "v$RESOLVED_VERSION"
   categories: # categorize
-    - title: "🚀 機能追加"
+    - title: "🚀 Feature"
       labels:
         - "enhancement"
-    - title: "🔧  リファクタ"
-      labels:
-        - "refactoring"
-    - title: "🐛 バグ修正"
+    - title: "🐛 Bug Fix"
       labels:
         - "bug"
-    - title: "✅ テスト"
-      labels:
-        - "test"
-    - title: "📖 ドキュメント"
+    - title: "📖 Document"
       labels:
         - "documentation"
   change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
@@ -24,14 +18,6 @@
       branch:
         - '/feature\/.+/'
         - '/feat\/.+/'
-    - label: "release"
-      branch:
-        - '/release\/.+/'
-    - label: "refactoring"
-      branch:
-        - '/refactor\/.+/'
-      title:
-        - "/refactor/i"
     - label: "bug"
       branch:
         - '/fix\/.+/'
@@ -39,9 +25,6 @@
       title:
         - "/fix/i"
         - "/bug/i"
-    - label: "test"
-      branch:
-        - '/test\/.+/'
     - label: "documentation"
       branch:
         - '/doc\/.+/'
@@ -59,4 +42,3 @@
     ## 変更
   
     $CHANGES
-  
