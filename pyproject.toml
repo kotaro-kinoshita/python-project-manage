@@ -1,0 +1,36 @@
+[project]
+name = "example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.1.3",
+]
+
+[tool.uv]
+dev-dependencies = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.5.45",
+]
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = lint, mypy, py310, py311, py312
+
+[testenv]
+deps = pytest
+commands = 
+    pytest tests
+
+[testenv:lint]
+deps = ruff
+commands = 
+    ruff check --fix
+    ruff format
+
+[testenv:mypy]
+deps = mypy
+commands = mypy src tests --ignore-missing-imports --strict-optional --disallow-untyped-defs 
+"""
