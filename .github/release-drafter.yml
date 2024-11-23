@@ -8,7 +8,7 @@
     - title: "🐛 Bug Fix"
       labels:
         - "bug"
-    - title: "📖 ドキュメント"
+    - title: "📖 Document"
       labels:
         - "documentation"
   change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
@@ -18,10 +18,6 @@
       branch:
         - '/feature\/.+/'
         - '/feat\/.+/'
-      branch:
-        - '/refactor\/.+/'
-      title:
-        - "/refactor/i"
     - label: "bug"
       branch:
         - '/fix\/.+/'
