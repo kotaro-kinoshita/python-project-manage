@@ -34,3 +34,14 @@ commands =
 deps = mypy
 commands = mypy src tests --ignore-missing-imports --strict-optional --disallow-untyped-defs 
 """
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.version.raw-options]
+local_scheme = "no-local-version"
+version_scheme = "no-guess-dev"
